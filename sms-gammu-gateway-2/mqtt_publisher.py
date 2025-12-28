@@ -173,7 +173,7 @@ class MQTTPublisher:
         self.connected = False
         self.disconnecting = False  # Flag to prevent multiple disconnect calls
         self.topic_prefix = config.get(
-            "mqtt_topic_prefix", "homeassistant/sensor/sms_gateway"
+            "mqtt_topic_prefix", "homeassistant/sensor/sms_gateway_2"
         )
         self.availability_topic = (
             f"{self.topic_prefix}/availability"  # Shared availability for all entities
@@ -795,7 +795,7 @@ class MQTTPublisher:
         # Common device config for all entities
         DEVICE_CONFIG = {
             "identifiers": ["sms_gateway_2"],
-            "name": "SMS Gateway",
+            "name": "SMS Gateway - 2",
             "model": "GSM Modem",
             "manufacturer": "Gammu Gateway",
         }
