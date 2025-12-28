@@ -21,7 +21,7 @@
     "mqtt_port": 1883,
     "mqtt_username": "",
     "mqtt_password": "",
-    "mqtt_topic_prefix": "homeassistant/sensor/sms_gateway_1",
+    "mqtt_topic_prefix": "homeassistant/sensor/sms_gateway_2",
     "sms_monitoring_enabled": true,
     "sms_check_interval": 60,
     "sms_cost_per_message": 0.0,
