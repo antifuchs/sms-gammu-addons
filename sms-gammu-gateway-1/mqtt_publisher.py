@@ -795,7 +795,7 @@ class MQTTPublisher:
         # Common device config for all entities
         DEVICE_CONFIG = {
             "identifiers": ["sms_gateway_1"],
-            "name": "SMS Gateway",
+            "name": "SMS Gateway - 1",
             "model": "GSM Modem",
             "manufacturer": "Gammu Gateway",
         }
@@ -1011,41 +1011,53 @@ class MQTTPublisher:
 
         # Publish discovery configs
         discoveries = [
-            ("homeassistant/sensor/sms_gateway_signal/config", signal_config),
-            ("homeassistant/sensor/sms_gateway_network/config", network_config),
-            ("homeassistant/sensor/sms_gateway_last_sms/config", sms_config),
-            ("homeassistant/sensor/sms_gateway_send_status/config", send_status_config),
+            ("homeassistant/sensor/sms_gateway_signal_1/config", signal_config),
+            ("homeassistant/sensor/sms_gateway_network_1/config", network_config),
+            ("homeassistant/sensor/sms_gateway_last_sms_1/config", sms_config),
             (
-                "homeassistant/sensor/sms_gateway_delete_status/config",
+                "homeassistant/sensor/sms_gateway_send_status_1/config",
+                send_status_config,
+            ),
+            (
+                "homeassistant/sensor/sms_gateway_delete_status_1/config",
                 delete_status_config,
             ),
             (
-                "homeassistant/sensor/sms_gateway_modem_status/config",
+                "homeassistant/sensor/sms_gateway_modem_status_1/config",
                 device_status_config,
             ),
-            ("homeassistant/sensor/sms_gateway_sent_count/config", sms_counter_config),
-            ("homeassistant/sensor/sms_gateway_modem_imei/config", modem_imei_config),
-            ("homeassistant/sensor/sms_gateway_modem_model/config", modem_model_config),
-            ("homeassistant/sensor/sms_gateway_sim_imsi/config", sim_imsi_config),
             (
-                "homeassistant/sensor/sms_gateway_sms_capacity/config",
+                "homeassistant/sensor/sms_gateway_sent_count_1/config",
+                sms_counter_config,
+            ),
+            ("homeassistant/sensor/sms_gateway_modem_imei_1/config", modem_imei_config),
+            (
+                "homeassistant/sensor/sms_gateway_modem_model_1/config",
+                modem_model_config,
+            ),
+            ("homeassistant/sensor/sms_gateway_sim_imsi_1/config", sim_imsi_config),
+            (
+                "homeassistant/sensor/sms_gateway_sms_capacity_1/config",
                 sms_capacity_config,
             ),
-            ("homeassistant/button/sms_gateway_send_button/config", button_config),
+            ("homeassistant/button/sms_gateway_send_button_1/config", button_config),
             (
-                "homeassistant/button/sms_gateway_send_flash_button/config",
+                "homeassistant/button/sms_gateway_send_flash_button_1/config",
                 flash_button_config,
             ),
             (
-                "homeassistant/button/sms_gateway_reset_counter/config",
+                "homeassistant/button/sms_gateway_reset_counter_1/config",
                 reset_counter_button_config,
             ),
             (
-                "homeassistant/button/sms_gateway_delete_all_sms/config",
+                "homeassistant/button/sms_gateway_delete_all_sms_1/config",
                 delete_all_sms_button_config,
             ),
-            ("homeassistant/text/sms_gateway_phone_number/config", phone_text_config),
-            ("homeassistant/text/sms_gateway_message_text/config", message_text_config),
+            ("homeassistant/text/sms_gateway_phone_number_1/config", phone_text_config),
+            (
+                "homeassistant/text/sms_gateway_message_text_1/config",
+                message_text_config,
+            ),
         ]
 
         # Add cost sensor only if cost is configured (> 0)
@@ -1063,7 +1075,10 @@ class MQTTPublisher:
                 **AVAILABILITY_CONFIG,
             }
             discoveries.append(
-                ("homeassistant/sensor/sms_gateway_total_cost/config", sms_cost_config)
+                (
+                    "homeassistant/sensor/sms_gateway_total_cost_1/config",
+                    sms_cost_config,
+                )
             )
 
         for topic, config in discoveries:

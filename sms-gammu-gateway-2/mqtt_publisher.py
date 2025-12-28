@@ -810,7 +810,7 @@ class MQTTPublisher:
         # Signal strength sensor
         signal_config = {
             "name": "GSM Signal Strength",
-            "unique_id": "sms_gateway_signal",
+            "unique_id": "sms_gateway_1_signal",
             "state_topic": f"{self.topic_prefix}/signal/state",
             "value_template": "{{ value_json.SignalPercent }}",
             "unit_of_measurement": "%",
@@ -822,7 +822,7 @@ class MQTTPublisher:
         # Network info sensor
         network_config = {
             "name": "GSM Network",
-            "unique_id": "sms_gateway_network",
+            "unique_id": "sms_gateway_1_network",
             "state_topic": f"{self.topic_prefix}/network/state",
             "value_template": "{{ value_json.NetworkName }}",
             "icon": "mdi:network",
@@ -833,7 +833,7 @@ class MQTTPublisher:
         # Last SMS sensor
         sms_config = {
             "name": "Last SMS Received",
-            "unique_id": "sms_gateway_last_sms",
+            "unique_id": "sms_gateway_1_last_sms",
             "state_topic": f"{self.topic_prefix}/sms/state",
             "value_template": "{{ value_json.Text }}",
             "json_attributes_topic": f"{self.topic_prefix}/sms/state",
@@ -845,7 +845,7 @@ class MQTTPublisher:
         # SMS send status sensor
         send_status_config = {
             "name": "SMS Send Status",
-            "unique_id": "sms_gateway_send_status",
+            "unique_id": "sms_gateway_1_send_status",
             "state_topic": f"{self.topic_prefix}/send_status",
             "value_template": "{{ value_json.status }}",
             "json_attributes_topic": f"{self.topic_prefix}/send_status",
@@ -857,7 +857,7 @@ class MQTTPublisher:
         # SMS delete status sensor
         delete_status_config = {
             "name": "SMS Delete Status",
-            "unique_id": "sms_gateway_delete_status",
+            "unique_id": "sms_gateway_1_delete_status",
             "state_topic": f"{self.topic_prefix}/delete_sms_status",
             "value_template": "{{ value_json.status }}",
             "json_attributes_topic": f"{self.topic_prefix}/delete_sms_status",
@@ -869,7 +869,7 @@ class MQTTPublisher:
         # SMS send button
         button_config = {
             "name": "Send SMS",
-            "unique_id": "sms_gateway_send_button",
+            "unique_id": "sms_gateway_1_send_button",
             "command_topic": f"{self.topic_prefix}/send_button",
             "payload_press": "PRESS",
             "icon": "mdi:message-plus",
@@ -880,7 +880,7 @@ class MQTTPublisher:
         # Flash SMS send button
         flash_button_config = {
             "name": "Send Flash SMS",
-            "unique_id": "sms_gateway_send_flash_button",
+            "unique_id": "sms_gateway_1_send_flash_button",
             "command_topic": f"{self.topic_prefix}/send_flash_button",
             "payload_press": "PRESS",
             "icon": "mdi:message-flash",
@@ -891,7 +891,7 @@ class MQTTPublisher:
         # Phone number input text
         phone_text_config = {
             "name": "Phone Number",
-            "unique_id": "sms_gateway_phone_number",
+            "unique_id": "sms_gateway_1_phone_number",
             "command_topic": f"{self.topic_prefix}/phone_number/set",
             "state_topic": f"{self.topic_prefix}/phone_number/state",
             "icon": "mdi:phone",
@@ -904,7 +904,7 @@ class MQTTPublisher:
         # Message input text
         message_text_config = {
             "name": "Message Text",
-            "unique_id": "sms_gateway_message_text",
+            "unique_id": "sms_gateway_1_message_text",
             "command_topic": f"{self.topic_prefix}/message_text/set",
             "state_topic": f"{self.topic_prefix}/message_text/state",
             "icon": "mdi:message-text",
@@ -917,7 +917,7 @@ class MQTTPublisher:
         # Modem Status sensor
         device_status_config = {
             "name": "Modem Status",
-            "unique_id": "sms_gateway_modem_status",
+            "unique_id": "sms_gateway_1_modem_status",
             "state_topic": f"{self.topic_prefix}/device_status/state",
             "value_template": "{{ value_json.status }}",
             "json_attributes_topic": f"{self.topic_prefix}/device_status/state",
@@ -929,7 +929,7 @@ class MQTTPublisher:
         # SMS Counter sensor
         sms_counter_config = {
             "name": "SMS Sent Count",
-            "unique_id": "sms_gateway_sent_count",
+            "unique_id": "sms_gateway_1_sent_count",
             "state_topic": f"{self.topic_prefix}/sms_counter/state",
             "value_template": "{{ value_json.count }}",
             "icon": "mdi:counter",
@@ -944,7 +944,7 @@ class MQTTPublisher:
         # Reset counter button
         reset_counter_button_config = {
             "name": "Reset SMS Counter",
-            "unique_id": "sms_gateway_reset_counter",
+            "unique_id": "sms_gateway_1_reset_counter",
             "command_topic": f"{self.topic_prefix}/reset_counter_button",
             "payload_press": "PRESS",
             "icon": "mdi:restart",
@@ -955,7 +955,7 @@ class MQTTPublisher:
         # Delete all SMS button
         delete_all_sms_button_config = {
             "name": "Delete All SMS",
-            "unique_id": "sms_gateway_delete_all_sms",
+            "unique_id": "sms_gateway_1_delete_all_sms",
             "command_topic": f"{self.topic_prefix}/delete_all_sms_button",
             "payload_press": "PRESS",
             "icon": "mdi:delete-sweep",
@@ -966,7 +966,7 @@ class MQTTPublisher:
         # Modem IMEI sensor
         modem_imei_config = {
             "name": "Modem IMEI",
-            "unique_id": "sms_gateway_modem_imei",
+            "unique_id": "sms_gateway_1_modem_imei",
             "state_topic": f"{self.topic_prefix}/modem_info/state",
             "value_template": "{{ value_json.IMEI }}",
             "icon": "mdi:identifier",
@@ -977,7 +977,7 @@ class MQTTPublisher:
         # Modem Model sensor
         modem_model_config = {
             "name": "Modem Model",
-            "unique_id": "sms_gateway_modem_model",
+            "unique_id": "sms_gateway_1_modem_model",
             "state_topic": f"{self.topic_prefix}/modem_info/state",
             "value_template": "{{ value_json.Manufacturer }} {{ value_json.Model }}",
             "icon": "mdi:cellphone",
@@ -988,7 +988,7 @@ class MQTTPublisher:
         # SIM IMSI sensor
         sim_imsi_config = {
             "name": "SIM IMSI",
-            "unique_id": "sms_gateway_sim_imsi",
+            "unique_id": "sms_gateway_1_sim_imsi",
             "state_topic": f"{self.topic_prefix}/sim_info/state",
             "value_template": "{{ value_json.IMSI }}",
             "icon": "mdi:sim",
@@ -999,7 +999,7 @@ class MQTTPublisher:
         # SMS Capacity sensor
         sms_capacity_config = {
             "name": "SMS Storage Used",
-            "unique_id": "sms_gateway_sms_capacity",
+            "unique_id": "sms_gateway_1_sms_capacity",
             "state_topic": f"{self.topic_prefix}/sms_capacity/state",
             "value_template": "{{ value_json.SIMUsed }}",
             "json_attributes_topic": f"{self.topic_prefix}/sms_capacity/state",
@@ -1065,7 +1065,7 @@ class MQTTPublisher:
             sms_cost_currency = self.config.get("sms_cost_currency", "CZK")
             sms_cost_config = {
                 "name": "SMS Total Cost",
-                "unique_id": "sms_gateway_total_cost",
+                "unique_id": "sms_gateway_1_total_cost",
                 "state_topic": f"{self.topic_prefix}/sms_counter/state",
                 "value_template": "{{ value_json.cost }}",
                 "icon": "mdi:cash",
@@ -1075,7 +1075,10 @@ class MQTTPublisher:
                 **AVAILABILITY_CONFIG,
             }
             discoveries.append(
-                ("homeassistant/sensor/sms_gateway_total_cost/config", sms_cost_config)
+                (
+                    "homeassistant/sensor/sms_gateway_total_cost_2/config",
+                    sms_cost_config,
+                )
             )
 
         for topic, config in discoveries:
