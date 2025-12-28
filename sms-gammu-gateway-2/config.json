@@ -12,7 +12,7 @@
   "options": {
     "device_path": "/dev/ttyUSB0",
     "pin": "",
-    "port": 5000,
+    "port": 5002,
     "ssl": false,
     "username": "admin",
     "password": "password",
@@ -48,7 +48,7 @@
     "auto_delete_read_sms": "bool"
   },
   "ingress": true,
-  "ingress_port": 5001,
+  "ingress_port": 5002,
   "host_network": false,
   "devices": [
     "/dev/ttyUSB0:/dev/ttyUSB0:rwm",
@@ -69,9 +69,9 @@
   "udev": true,
   "init": false,
   "ports": {
-    "5001/tcp": 5001
+    "5002/tcp": 5002
   },
   "ports_description": {
-    "5001/tcp": "SMS Gateway API port"
+    "5002/tcp": "SMS Gateway API port"
   }
 }
